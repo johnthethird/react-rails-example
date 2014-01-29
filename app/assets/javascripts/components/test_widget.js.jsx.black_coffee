@@ -1,0 +1,15 @@
+`/** @jsx React.DOM */`
+
+TestWidget = React.createClass
+  displayName: "TestWidget"
+  handleClick: (e) -> console.log e
+  render: ->
+    item = (i) => `<li onClick={this.handleClick}>{i}</li>`
+    `<div>
+      <h1 onClick={this.handleClick}>Widget {this.props.name}</h1>
+      <ul>
+        {this.props.items.map(item)}
+      </ul>
+    </div>`
+
+
