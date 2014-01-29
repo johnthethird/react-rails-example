@@ -1,5 +1,7 @@
-PATH
-  remote: ../react-rails
+GIT
+  remote: git://github.com/johnthethird/react-rails.git
+  revision: 8bb7697659db10e905c27acb00bfd16932576d28
+  branch: server-rendering
   specs:
     react-rails (0.8.0.0)
       execjs
