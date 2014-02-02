@@ -8,8 +8,8 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'sprockets-blackcoffee'
-gem 'react-rails', :github => 'johnthethird/react-rails', :branch => 'server-rendering'
-#gem 'react-rails', :path => '../react-rails'
+#gem 'react-rails', :github => 'johnthethird/react-rails', :branch => 'server-rendering'
+gem 'react-rails', :path => '../react-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
