@@ -1,10 +1,12 @@
 /** @jsx React.DOM */
 var List = React.createClass({
+
   render: function() {
     var items = this.props.emails.map(function(email, i) {
       return (
         <EmailItem
-            onClick={this.props.onEmailSelected.bind(this.props, i)}
+            key={i}
+            onClick={this.props.onEmailSelected.bind(null, i)}
             avatar={email.avatar}
             selected={this.props.selected === i}
             name={email.name}
@@ -23,4 +25,5 @@ var List = React.createClass({
       </div>
     );
   }
+
 });

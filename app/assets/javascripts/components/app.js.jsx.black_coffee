@@ -1,0 +1,35 @@
+###* @jsx React.DOM ###
+
+App = React.createClass
+  displayName: "App"
+  getDefaultProps: ->
+    emails: []
+
+  getInitialState: ->
+    selected: 0
+    read: {}
+
+  componentDidMount: ->
+    setTimeout () =>
+      $.getJSON "/emails.json", (emails) => @setProps({emails: emails})
+    , 2000
+
+  handleEmailSelected: (index) ->
+    read = @state.read
+    read[@state.selected] = true
+    @setState
+      selected: index
+      read: read
+
+  render: ->
+    `(
+      <div className="pure-g-r content id-layout">
+        <Nav />
+        <List emails={this.props.emails}
+              selected={this.state.selected}
+              read={this.state.read}
+              onEmailSelected={this.handleEmailSelected} />
+        <Main email={this.props.emails[this.state.selected]} />
+      </div>
+    )`
+

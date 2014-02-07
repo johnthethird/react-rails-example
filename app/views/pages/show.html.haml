@@ -1,4 +1,4 @@
-%h1 Show Page
-
-= react_component "App", {}
-
+- if params[:ujs].present?
+  = react_component("App", {:emails => @emails}) {"Loading... "}
+- else
+  = react_server_component("App", {:emails => @emails})

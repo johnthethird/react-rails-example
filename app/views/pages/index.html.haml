@@ -1,7 +1,7 @@
 %h1 React Widget Server Rendering
 
-= react_component "TestWidget", {:name => 'foo', :items => %w{one two three four}}
+= react_component "TestWidget", {:name => 'foo', :items => %w{one t'wo th"ree four}}
 
-= react_component_ujs "TestWidget", {:name => 'foo', :items => %w{one two three four}}
+=# react_component_ujs "TestWidget", {:name => 'foo', :items => %w{one two three four}}
 
 = link_to 'Show', :action => :show, :id => 1
